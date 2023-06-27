@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "68988927596",
+    "project_id": "balancetoolapp",
+    "storage_bucket": "balancetoolapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68988927596:android:923ba11f4a97f0648e2249",
+        "android_client_info": {
+          "package_name": "com.example.balancetoolapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68988927596-e86q0q5fnbphf6u0ulvp4ihcetta5hot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACHBWzNLvfixLEBWCP0g2up970CFgEwSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68988927596-e86q0q5fnbphf6u0ulvp4ihcetta5hot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

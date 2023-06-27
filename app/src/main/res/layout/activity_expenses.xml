@@ -7,7 +7,7 @@
     tools:context=".ExpensesActivity">
 
 
-    <TextView
+    <EditText
         android:id="@+id/mBeditDate"
         android:layout_width="300dp"
         android:layout_height="60dp"
@@ -17,13 +17,12 @@
         android:layout_marginBottom="1dp"
         android:ems="10"
         android:hint="DATE"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:inputType="number"
         android:paddingRight="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/mListExpenses"
-        app:layout_constraintStart_toStartOf="@+id/mListExpenses"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@tools:sample/date/ddmmyy" />
+        android:textSize="20sp"
+
+
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/mListExpenses"
