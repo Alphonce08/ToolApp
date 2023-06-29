@@ -10,13 +10,13 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.coroutines.NonCancellable.message
+
 
 class Login : AppCompatActivity() {
     lateinit var EdtEmail:EditText
     lateinit var EdtPassword:EditText
-    lateinit var TxtRegister:TextView
     lateinit var BtLogin:Button
+    lateinit var TxtSignup:TextView
     lateinit var progress:ProgressDialog
     lateinit var mAuth:FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,16 +24,11 @@ class Login : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         EdtEmail = findViewById(R.id.mEdtEmailLogin)
         EdtPassword = findViewById(R.id.medtPass)
-        TxtRegister = findViewById(R.id.TextNoAccount)
         BtLogin = findViewById(R.id.BtnLogin)
+        TxtSignup = findViewById(R.id.SignupTxt)
 
-        BtLogin.setOnClickListener {
-            startActivity(Intent(applicationContext, MainActivity::class.java))
-        }
 
-        TxtRegister.setOnClickListener {
-            startActivity(Intent(this, Register::class.java))
-        }
+
         mAuth = FirebaseAuth.getInstance()
         progress = ProgressDialog(this)
         progress.setTitle("Loading")
@@ -60,19 +55,18 @@ class Login : AppCompatActivity() {
 
                         finish()
 
-                    } else {
-                        displayMessage("ERROR", it.exception!!.message.toString())
-                        var alertDialog = AlertDialog.Builder(this)
-                        alertDialog.setTitle(title)
-                        alertDialog.setMessage(message)
-                        alertDialog.setPositiveButton("Ok", null)
-                        alertDialog.create().show()
-                    }
+
                 }
             }
         }
         }
-
-
+        BtLogin.setOnClickListener {
+            startActivity(Intent(applicationContext, MainActivity::class.java))
+        }
+        TxtSignup.setOnClickListener {
+            startActivity(Intent(applicationContext, Register::class.java))
+        }
     }
+}
+
 

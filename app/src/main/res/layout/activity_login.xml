@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img_1"
     tools:context=".Login">
 
     <EditText
@@ -12,10 +13,11 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter Email"
-        android:textColor="@color/black"
+        android:textColor="@color/blue"
         android:textSize="25dp"
         android:layout_marginTop="150dp"
         android:layout_centerHorizontal="true"
+        android:textStyle="bold"
         android:inputType="textEmailAddress"
         tools:layout_editor_absoluteX="83dp"
         tools:layout_editor_absoluteY="165dp" />
@@ -30,17 +32,33 @@
         android:layout_marginTop="270dp"
         android:layout_centerHorizontal="true"
         android:inputType="textPassword"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="71dp"
         tools:layout_editor_absoluteY="290dp" />
 
-    <Button
-        android:id="@+id/BtnLogin"
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/red"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="291dp"
+        android:text="Forget password"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/BtnLogin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="500dp"
+        android:text="Sign in"
         android:textSize="30sp"
-        android:layout_marginTop="370dp"
-        android:layout_centerHorizontal="true"
         tools:layout_editor_absoluteX="107dp"
         tools:layout_editor_absoluteY="411dp" />
 
@@ -51,8 +69,24 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="54dp"
-        android:layout_marginBottom="213dp"
-        android:text="You don't have an account? Register"
-        android:textSize="20dp" />
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="76dp"
+        android:textColor="@color/blue"
+        android:text="No account?"
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/SignupTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="80dp"
+        android:textColor="@color/blue"
+        android:text="Sign up"
+        android:textSize="25sp" />
+
+
 </RelativeLayout>
