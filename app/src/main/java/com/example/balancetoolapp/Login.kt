@@ -26,47 +26,48 @@ class Login : AppCompatActivity() {
         EdtPassword = findViewById(R.id.medtPass)
         BtLogin = findViewById(R.id.BtnLogin)
         TxtSignup = findViewById(R.id.SignupTxt)
-
-
-
         mAuth = FirebaseAuth.getInstance()
         progress = ProgressDialog(this)
         progress.setTitle("Loading")
         progress.setMessage("Please wait...")
         BtLogin.setOnClickListener {
-
             //start by receiving data from the user
             var email = EdtEmail.text.toString().trim()
-            var password = EdtPassword.text.toString().toString()
+            var password = EdtEmail.text.toString().trim()
             //check if the user is submitting empty fields
-            if (email.isEmpty()){
+            if (email.isEmpty()) {
                 EdtEmail.setError("Please fill this input")
                 EdtEmail.requestFocus()
-            } else if (password.isEmpty()){
+            } else if (password.isEmpty()) {
                 EdtPassword.setError("Please fill this input")
                 EdtPassword.requestFocus()
+            } else if (password.length < 6) {
+                EdtPassword.setError("Password is too short")
+                EdtPassword.requestFocus()
             } else {
-                //Proceed to Login the user
+                //Proceed to register the user
                 progress.show()
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     progress.dismiss()
-                    if (it.isComplete){
-                        Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
+                    if (it.isComplete) {
+                        Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT)
+                            .show()
+                        mAuth.signOut()
 
                         finish()
 
 
+                    }
                 }
             }
-        }
-        }
-        BtLogin.setOnClickListener {
             startActivity(Intent(applicationContext, MainActivity::class.java))
         }
+
         TxtSignup.setOnClickListener {
             startActivity(Intent(applicationContext, Register::class.java))
         }
     }
+
 }
 
 

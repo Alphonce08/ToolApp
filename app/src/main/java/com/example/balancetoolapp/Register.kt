@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class Register : AppCompatActivity() {
     lateinit var EditEmail:EditText
-    lateinit var EdtPassword:EditText
+    lateinit var EditPassword:EditText
     lateinit var BtRegister:Button
     lateinit var progress:ProgressDialog
     lateinit var mAuth:FirebaseAuth
@@ -22,7 +22,7 @@ class Register : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_register)
             EditEmail = findViewById(R.id.mEdtEmail)
-            EdtPassword = findViewById(R.id.mEdtPassword)
+            EditPassword = findViewById(R.id.mEdtPassword)
             BtRegister = findViewById(R.id.BtnRegister)
             BtRegister.setOnClickListener {
                 startActivity(Intent(applicationContext, MainActivity::class.java))
@@ -35,17 +35,17 @@ class Register : AppCompatActivity() {
             BtRegister.setOnClickListener {
                 //start by receiving data from the user
                 var email = EditEmail.text.toString().trim()
-                var password = EdtPassword.text.toString().toString()
+                var password = EditPassword.text.toString().trim()
                 //check if the user is submitting empty fields
                 if (email.isEmpty()) {
                     EditEmail.setError("Please fill this input")
                     EditEmail.requestFocus()
                 } else if (password.isEmpty()) {
-                    EdtPassword.setError("Please fill this input")
-                    EdtPassword.requestFocus()
+                    EditPassword.setError("Please fill this input")
+                    EditPassword.requestFocus()
                 } else if (password.length < 6) {
-                    EdtPassword.setError("Password is too short")
-                    EdtPassword.requestFocus()
+                    EditPassword.setError("Password is too short")
+                    EditPassword.requestFocus()
                 } else {
                     //Proceed to register the user
                     progress.show()

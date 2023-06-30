@@ -19,12 +19,11 @@ class MainActivity : AppCompatActivity() {
         BtnExpenses = findViewById(R.id.mBExpenses)
         BtnReceived = findViewById(R.id.mBReceived)
         BtnExpenses.setOnClickListener {
-            startActivity(Intent(applicationContext,ExpensesActivity::class.java))
+            startActivity(Intent(applicationContext, ExpensesActivity::class.java))
         }
         BtnReceived.setOnClickListener {
-            startActivity(Intent(applicationContext,ReceivedActivity::class.java))
+            startActivity(Intent(applicationContext, ReceivedActivity::class.java))
         }
-
 
 
     }
