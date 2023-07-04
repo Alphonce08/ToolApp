@@ -12,6 +12,8 @@ import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 
 
+
+
 class Login : AppCompatActivity() {
     lateinit var EdtEmail:EditText
     lateinit var EdtPassword:EditText
@@ -63,11 +65,13 @@ class Login : AppCompatActivity() {
             startActivity(Intent(applicationContext, MainActivity::class.java))
         }
 
+
         TxtSignup.setOnClickListener {
             startActivity(Intent(applicationContext, Register::class.java))
         }
     }
 
 }
+
 
 

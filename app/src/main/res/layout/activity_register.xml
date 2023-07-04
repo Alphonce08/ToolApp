@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_1"
+    android:background="@drawable/img"
     tools:context=".Register">
 
     <EditText
@@ -13,13 +13,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Email"
+        android:textColorHint="@color/black"
         android:textSize="25dp"
         android:inputType="textEmailAddress"
         android:layout_marginTop="150dp"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"
         tools:layout_editor_absoluteX="64dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         tools:layout_editor_absoluteY="147dp" />
 
     <EditText
@@ -28,12 +28,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Password"
+        android:textColorHint="@color/black"
         android:layout_marginTop="250dp"
-        android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/black"
         android:inputType="textPassword"
         android:textSize="25dp"
+        android:textColor="@color/black"
         tools:layout_editor_absoluteX="64dp"
         tools:layout_editor_absoluteY="252dp" />
 
@@ -41,7 +41,7 @@
 
     <Button
         android:id="@+id/BtnRegister"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
@@ -49,6 +49,7 @@
         android:layout_marginTop="450dp"
         android:text="Sign up"
         android:textSize="30sp"
+        android:textColor="@color/black"
         tools:layout_editor_absoluteX="89dp"
         android:textStyle="bold"
         tools:layout_editor_absoluteY="361dp" />
