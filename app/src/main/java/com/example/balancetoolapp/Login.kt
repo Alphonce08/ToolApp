@@ -54,15 +54,13 @@ class Login : AppCompatActivity() {
                     if (it.isComplete) {
                         Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT)
                             .show()
-                        mAuth.signOut()
-
+                        startActivity(Intent(applicationContext, MainActivity::class.java))
                         finish()
 
 
                     }
                 }
             }
-            startActivity(Intent(applicationContext, MainActivity::class.java))
         }
 
 
