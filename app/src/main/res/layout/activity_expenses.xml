@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@drawable/img"
     tools:context=".ExpensesActivity">
 
@@ -11,23 +12,19 @@
     <!-- activity_main.xml -->
 
 
-    <EditText
-        android:id="@+id/mBeditDate"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+    <DatePicker
+
+        android:id="@+id/datePickerid"
+        android:layout_width="315dp"
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="1dp"
-        android:ems="10"
-        android:hint="DATE"
-        android:inputType="datetime"
-        android:paddingRight="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textStyle="bold" />
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="85dp"
+        android:background="@drawable/pickerstroke"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
 
     <EditText
         android:id="@+id/edtAmount"
@@ -37,27 +34,31 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="145dp"
-        android:textColor="@color/black"
+        android:layout_marginTop="231dp"
         android:ems="10"
         android:hint="Add Amount"
-        android:textColorHint="@color/black"
-        android:inputType="number" />
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/editDescription"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="49dp"
-        android:layout_marginTop="263dp"
+        android:layout_marginTop="313dp"
         android:ems="10"
         android:hint="Description"
-        android:inputType="text" />
+        android:textStyle="bold"
+        android:inputType="text"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
     <Button
         android:id="@+id/BtnSaved"
@@ -65,9 +66,9 @@
         android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="79dp"
-        android:layout_marginBottom="208dp"
-        android:text="Saved"
+        android:layout_marginStart="83dp"
+        android:layout_marginBottom="144dp"
+        android:text="Save"
         android:textSize="35sp"
         android:textStyle="bold" />
 

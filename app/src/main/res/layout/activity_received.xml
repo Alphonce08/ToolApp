@@ -8,20 +8,21 @@
     android:background="@drawable/img"
     tools:context=".ReceivedActivity">
 
-    <EditText
-        android:id="@+id/edtDate"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+
+    <DatePicker
+
+        android:id="@+id/datePickerida"
+        android:layout_width="315dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="59dp"
-        android:layout_marginTop="150dp"
-        android:ems="10"
-        android:hint="DATE"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:inputType="date" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="62dp"
+        android:background="@drawable/pickerstroke"
+        android:calendarTextColor="@color/black"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
 
     <EditText
         android:id="@+id/editAmountRec"
@@ -30,26 +31,30 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="239dp"
         android:ems="10"
+        android:hint="Amount Received"
+        android:inputType="number"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        android:hint="Amount Received"
-        android:inputType="number" />
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edtdescrp"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="450dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="372dp"
         android:ems="10"
         android:hint="From"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/mBtnSaved"
@@ -57,9 +62,9 @@
         android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="70dp"
-        android:layout_marginBottom="80dp"
-        android:text="Saved"
+        android:layout_marginStart="67dp"
+        android:layout_marginBottom="117dp"
+        android:text="Save"
         android:textColor="@color/black"
         android:textSize="35sp" />
 
