@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 class Register : AppCompatActivity() {
     lateinit var EditEmail:EditText
     lateinit var EditPassword:EditText
+    lateinit var edtconfirm:EditText
     lateinit var BtRegister:Button
     lateinit var progress:ProgressDialog
     lateinit var mAuth:FirebaseAuth
@@ -23,10 +24,10 @@ class Register : AppCompatActivity() {
             setContentView(R.layout.activity_register)
             EditEmail = findViewById(R.id.mEdtEmail)
             EditPassword = findViewById(R.id.mEdtPassword)
+            edtconfirm = findViewById(R.id.edtConfirmPass)
             BtRegister = findViewById(R.id.BtnRegister)
             BtRegister.setOnClickListener {
                 startActivity(Intent(applicationContext, MainActivity::class.java))
-
             }
             mAuth = FirebaseAuth.getInstance()
             progress = ProgressDialog(this)
@@ -55,10 +56,7 @@ class Register : AppCompatActivity() {
                             Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT)
                                 .show()
                             mAuth.signOut()
-
                             finish()
-
-
                         }
                     }
                 }

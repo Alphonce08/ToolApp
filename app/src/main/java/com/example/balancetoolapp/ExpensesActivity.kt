@@ -69,6 +69,10 @@ class ExpensesActivity : AppCompatActivity() {
                             Toast.LENGTH_SHORT
                         ).show()
 
+                        //intent to view expenses
+                        var intent = Intent(this, ViewExpense::class.java)
+                        startActivity(intent)
+
                     } else {
 
                         Toast.makeText(this, "Failed to Upload Expenses Data", Toast.LENGTH_SHORT)

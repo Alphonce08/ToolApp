@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/img"
     tools:context=".Register">
-
     <EditText
         android:id="@+id/mEdtEmail"
         android:layout_width="wrap_content"
@@ -22,22 +21,28 @@
         tools:layout_editor_absoluteX="64dp"
         tools:layout_editor_absoluteY="147dp" />
 
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+    </androidx.appcompat.widget.AppCompatCheckedTextView>
+
     <EditText
         android:id="@+id/mEdtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
         android:ems="10"
         android:hint="Password"
-        android:textColorHint="@color/black"
-        android:layout_marginTop="250dp"
-        android:layout_centerHorizontal="true"
         android:inputType="textPassword"
-        android:textSize="25dp"
         android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="25dp"
         tools:layout_editor_absoluteX="64dp"
         tools:layout_editor_absoluteY="252dp" />
-
-
 
     <Button
         android:id="@+id/BtnRegister"
@@ -53,6 +58,20 @@
         tools:layout_editor_absoluteX="89dp"
         android:textStyle="bold"
         tools:layout_editor_absoluteY="361dp" />
+
+    <EditText
+        android:id="@+id/edtConfirmPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="269dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:textSize="25sp"
+        android:textColorHint="@color/black"
+        android:inputType="numberPassword" />
 
 
 </RelativeLayout>

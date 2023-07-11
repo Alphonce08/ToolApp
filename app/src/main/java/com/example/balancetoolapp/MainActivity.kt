@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         BtnExpenses = findViewById(R.id.mBExpenses)
         BtnReceived = findViewById(R.id.mBReceived)
         BtnExpenses.setOnClickListener {
