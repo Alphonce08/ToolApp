@@ -49,7 +49,7 @@
         android:layout_marginStart="81dp"
         android:layout_marginTop="372dp"
         android:ems="10"
-        android:hint="From"
+        android:hint="Received From?"
         android:inputType="text"
         android:textColor="@color/black"
         android:textColorHint="@color/black"

@@ -53,12 +53,12 @@
         android:layout_marginStart="49dp"
         android:layout_marginTop="313dp"
         android:ems="10"
-        android:hint="Description"
-        android:textStyle="bold"
+        android:hint="You Spend On?"
         android:inputType="text"
-        android:textSize="25sp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/BtnSaved"

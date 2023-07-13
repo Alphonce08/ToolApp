@@ -15,6 +15,9 @@
         android:theme="@style/Theme.BalanceToolApp"
         tools:targetApi="31">
         <activity
+            android:name=".Income_layout"
+            android:exported="false" />
+        <activity
             android:name=".IncomeViewActivity"
             android:exported="false" />
         <activity

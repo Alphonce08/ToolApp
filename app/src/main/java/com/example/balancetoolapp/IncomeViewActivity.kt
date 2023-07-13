@@ -10,13 +10,13 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class Incomeview : AppCompatActivity() {
+class ViewExpenses : AppCompatActivity() {
 
     //initilaise your listview
     lateinit var car_list: ListView
 
     //array list
-    lateinit var income: ArrayList<Expenses>
+    lateinit var expenses: ArrayList<Expenses>
 
     //declare adapter
     lateinit var adapter: CustomAdapter
@@ -27,30 +27,30 @@ class Incomeview : AppCompatActivity() {
         setContentView(R.layout.activity_income_view)
 
 
-        car_list = findViewById(R.id.Mycarlist)
+        car_list = findViewById(R.id.mycarlist)
 
 
-        income = ArrayList()
+        expenses = ArrayList()
 
-        adapter = CustomAdapter(this, income)
+        adapter = CustomAdapter(this, expenses)
 
         var ref = FirebaseDatabase.getInstance().getReference().child("expense")
 
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                income.clear()
+                expenses.clear()
 
                 //loop to insert and display
                 for (snap in snapshot.children){
                     var usercar = snap.getValue(Expenses::class.java)
-                    income.add(usercar!!)
+                    expenses.add(usercar!!)
                 }
                 adapter.notifyDataSetChanged()
             }
 
             override fun onCancelled(error: DatabaseError) {
 
-                Toast.makeText(this@Incomeview, "Database Inaccessible", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ViewExpenses, "Database Inaccessible", Toast.LENGTH_SHORT).show()
             }
         })
 
