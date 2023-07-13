@@ -48,6 +48,13 @@ class Register : AppCompatActivity() {
                     EditPassword.setError("Password is too short")
                     EditPassword.requestFocus()
                 } else {
+                    //Validate email
+                    Patten patten = Pattens.EMAIL_ADDRESS;
+                    if(!pattern.matcher(email).matches()){
+                    EditEmail.setError("Please enter a valid email address")
+                    EditEmail.requestFocus()
+                        
+                    }
                     //Proceed to register the user
                     progress.show()
                     mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
