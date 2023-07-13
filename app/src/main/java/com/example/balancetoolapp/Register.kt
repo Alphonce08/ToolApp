@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import java.util.regex.Pattern
 
 class Register : AppCompatActivity() {
     lateinit var EditEmail:EditText
@@ -49,7 +50,7 @@ class Register : AppCompatActivity() {
                     EditPassword.requestFocus()
                 } else {
                     //Validate email
-                    Patten patten = Pattens.EMAIL_ADDRESS;
+                    Pattern pattern = Patterns.EMAIL_ADDRESS;
                     if(!pattern.matcher(email).matches()){
                     EditEmail.setError("Please enter a valid email address")
                     EditEmail.requestFocus()
