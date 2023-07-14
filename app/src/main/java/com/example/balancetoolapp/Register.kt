@@ -50,8 +50,8 @@ class Register : AppCompatActivity() {
                     EditPassword.requestFocus()
                 } else {
                     //Validate email
-                    Pattern pattern = Patterns.EMAIL_ADDRESS;
-                    if(!pattern.matcher(email).matches()){
+                   // Pattern pattern = Patterns.EMAIL_ADDRESS;
+                    //if(!patten.matcher(email).matches()){
                     EditEmail.setError("Please enter a valid email address")
                     EditEmail.requestFocus()
                         
@@ -70,7 +70,6 @@ class Register : AppCompatActivity() {
                 }
             }
         }
-}
 
 
 

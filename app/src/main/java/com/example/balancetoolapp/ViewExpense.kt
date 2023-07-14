@@ -55,17 +55,5 @@ class ViewExpense : AppCompatActivity() {
         car_list.adapter = adapter
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

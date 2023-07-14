@@ -42,8 +42,11 @@ class ViewExpenses : AppCompatActivity() {
 
                 //loop to insert and display
                 for (snap in snapshot.children){
+
                     var usercar = snap.getValue(Expenses::class.java)
                     expenses.add(usercar!!)
+
+
                 }
                 adapter.notifyDataSetChanged()
             }
@@ -55,16 +58,6 @@ class ViewExpenses : AppCompatActivity() {
         })
 
         car_list.adapter = adapter
-
-
-
-
-
-
-
-
-
-
 
 
 

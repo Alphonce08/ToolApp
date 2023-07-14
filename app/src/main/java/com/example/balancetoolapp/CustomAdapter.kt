@@ -13,7 +13,7 @@ class CustomAdapter(var context: Context, var data:ArrayList<Expenses>):BaseAdap
 
         var txtamount:TextView
         var txtdescription:TextView
-        var txtdate:Date
+        //var txtdate:Date
         var btn_update:Button
         var btn_delete:Button
 
@@ -22,7 +22,7 @@ class CustomAdapter(var context: Context, var data:ArrayList<Expenses>):BaseAdap
 
             this.txtamount = row?.findViewById(R.id.mTxtamount) as TextView
             this.txtdescription = row?.findViewById(R.id.mTxtdescription) as TextView
-            this.txtdate = row?.findViewById(R.id.mTxtDate) as Date
+            //this.txtdate = row?.findViewById(R.id.mTxtDate) as Date
             this.btn_update = row?.findViewById(R.id.btnUpdate) as Button
             this.btn_delete = row?.findViewById(R.id.btnDelete) as Button
 
@@ -43,7 +43,7 @@ class CustomAdapter(var context: Context, var data:ArrayList<Expenses>):BaseAdap
         var item:Expenses = getItem(position) as Expenses
         viewHolder.txtamount.text = item.amount  //coming from your model
         viewHolder.txtdescription.text = item.description
-        viewHolder.txtdate.toLocaleDateString() = item.date
+        //viewHolder.txtdate.toLocaleDateString() = item.date
 
 //        viewHolder.btn_update.setOnClickListener {
 //
